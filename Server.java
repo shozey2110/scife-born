@@ -1,9 +1,13 @@
-public class Server {
-    public String name;
-    public int hackingLevelRequired;
-    public double moneyAvailable;
-    public boolean hacked;
+import java.util.ArrayList;
 
+public class Server {
+    private String name;
+    private int hackingLevelRequired;
+    private double moneyAvailable;
+    private boolean hacked;
+    
+    private ArrayList<Server> connections = new ArrayList<>();
+    
     public Server(String name, int hackingLevelRequired, double moneyAvailable) {
         this.name = name;
         this.hackingLevelRequired = hackingLevelRequired;
