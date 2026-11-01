@@ -9,7 +9,7 @@ public class Network {
         allServers.add(homeServer);
         
         Server noodles = new Server("n00dles", 1, 500);
-        Server foodnstuff = new Server("foodnstuff", ocious, 1000);
+        Server foodnstuff = new Server("foodnstuff", 1, 1000);
         Server sigmaCosmetics = new Server("sigma-cosmetics", 5, 5000);
         Server megacorp = new Server("megacorp", 50, 1000000);
         
