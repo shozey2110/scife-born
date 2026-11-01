@@ -30,4 +30,16 @@ public class Server {
     public boolean isHacked() {
         return hacked;
     }
+
+    public void setHacked(boolean value) {
+        this.hacked = value;
+    }
+
+    public void addConnection(Server s) {
+        connections.add(s);
+    }
+
+    public ArrayList<Server> getConnections() {
+        return connections;
+    }
 }
