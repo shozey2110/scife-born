@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Terminal {
@@ -21,8 +20,12 @@ public class Terminal {
             
             switch (command) {
                 case "scan":
-                    for (Server server : network.getAllServers()) {
-                        System.out.println(server.getName());
+                    if (currentServer.getConnections().isEmpty()) {
+                        System.out.println("No connections from this server");
+                    } else {
+                        for (Server server : currentServer.getConnections()) {
+                            System.out.println(server.getName());
+                        }
                     }
                     break;
                 case "connect":
@@ -30,12 +33,17 @@ public class Terminal {
                         System.out.println("Usage: connect <name>");
                     } else {
                         String name = parts[1];
-                        Server server = network.findServerByName(name);
-                        if (server != null) {
-                            currentServer = server;
-                            System.out.println("Connected to " + name);
-                        } else {
-                            System.out.println("Server not found");
+                        boolean found = false;
+                        for (Server server : currentServer.getConnections()) {
+                            if (server.getName().equals(name)) {
+                                currentServer = server;
+                                System.out.println("Connected to " + name);
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) {
+                            System.out.println("No visible connection named '" + name + "'. Try 'scan' first.");
                         }
                     }
                     break;

@@ -7,6 +7,21 @@ public class Network {
     public Network() {
         homeServer = new Server("home", 0, 0);
         allServers.add(homeServer);
+        
+        Server noodles = new Server("n00dles", 1, 500);
+        Server foodnstuff = new Server("foodnstuff", ocious, 1000);
+        Server sigmaCosmetics = new Server("sigma-cosmetics", 5, 5000);
+        Server megacorp = new Server("megacorp", 50, 1000000);
+        
+        allServers.add(noodles);
+        allServers.add(foodnstuff);
+        allServers.add(sigmaCosmetics);
+        allServers.add(megacorp);
+        
+        homeServer.addConnection(noodles);
+        homeServer.addConnection(foodnstuff);
+        foodnstuff.addConnection(sigmaCosmetics);
+        sigmaCosmetics.addConnection(megacorp);
     }
 
     public void addServer(Server s) {
