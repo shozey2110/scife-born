@@ -5,4 +5,5 @@ this project is just a basic passion-project, i'm very new to coding and was usi
 
 now this is infinitely more difficult that i thought it out to be because im basically a noob at this right now but i am committed and will maybe create a fucntioning bare-bones game. also im using bluej so lmao.
 
-also nobody gonna read this but if anyone does feel free to do wtv also im not familiar with git or github so ye.
+## Build & Run Instructions
+Clone the repo and run:
