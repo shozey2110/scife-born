@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Network {
     private ArrayList<Server> allServers = new ArrayList<>();
     private Server homeServer;
