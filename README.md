@@ -7,3 +7,6 @@ now this is infinitely more difficult that i thought it out to be because im bas
 
 ## Build & Run Instructions
 Clone the repo and run:
+"javac Server.java Player.java Network.java Terminal.java" followed by "java Terminal"
+
+Available commands as of yet: scan, connect <name>, hack, home, help, exit
