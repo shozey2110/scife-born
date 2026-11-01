@@ -48,6 +48,10 @@ public class Terminal {
                     }
                     break;
                 case "hack":
+                    if (currentServer.isHacked()) {
+                        System.out.println("You've already hacked this server. No more money available here.");
+                        break;
+                    }
                     if (player.getHackingLevel() >= currentServer.getHackingLevelRequired()) {
                         currentServer.setHacked(true);
                         player.setMoney(player.getMoney() + currentServer.getMoneyAvailable());
