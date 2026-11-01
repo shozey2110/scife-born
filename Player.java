@@ -1,4 +1,4 @@
-class Player {
+public class Player {
     private int hackingLevel;
     private double money;
     private Server currentServer;
